@@ -2,7 +2,6 @@
 const { JsonRpcProvider } = require('@ethersproject/providers');
 const snapshot = require('../');
 const networks = require('../src/networks.json');
-<<<<<<< HEAD
 
 /*
 ## Usage
@@ -20,11 +19,9 @@ const strategy =
   Object.keys(snapshot.strategies).find((s) => strategyArg == s) ||
   'erc20-balance-of';
 const example = require(`../src/strategies/${strategy}/examples.json`)[0];
-=======
 const example = require('../src/strategies/erc20-balance-of/examples.json')[0];
 const {signMessage, validateMessage, SigUtilSigner, getDomainType, getMessageERC712Hash} = require('../src/crypto/index.ts');
 const sigUtil = require('eth-sig-util');
->>>>>>> cherry-pick
 
 (async () => {
   console.log(`Strategy: "${strategy}"`);
@@ -39,12 +36,8 @@ const sigUtil = require('eth-sig-util');
       example.addresses,
       example.snapshot
     );
-<<<<<<< HEAD
-    console.log(scores);
-=======
     //console.log(scores);
     console.timeEnd('getScores');
->>>>>>> cherry-pick
   } catch (e) {
     console.log('getScores failed');
     console.error(e);
